@@ -42,15 +42,9 @@ For your second milestone, explain what you've worked on since your previous mil
 
 # First Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+My first milestone was assembling the physical robot and attaching all of the parts using the kit that I recieved. The kit came with an acrylic plate as the main body of the robot, so I attached the motors and wheels to the bottom of the plate. In the original kit, there was only one sensor that pointed straight forward, but for this project I will need two sensors, one on each side, in order to detect any obstacles in the way of the robot. Additonally, I needed to add a camera to the front of the robot so that it could see the ball and track it. This was the first challenge I had to overcome, as I would have to attach all of these parts onto the robot even though the robot wasn't designed for them. To overcome this, I had to find and repurpose different holes in the plate so that I could screw each of the parts on. Now that I've finished putting together the robot, I will have to start wiring each component to the RaspberryPi and then add the code so that the robot will be able to track the ball.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MZ9oSHlCFnE?si=c6Z2YKkvBLChy1ks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
