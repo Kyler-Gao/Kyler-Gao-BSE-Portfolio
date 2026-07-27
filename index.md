@@ -1,5 +1,5 @@
 # Ball Tracking Robot
-I made a robot that can track and chase a ball.
+I made a robot that can track and chase a ball. (will add more later)
 
 ```HTML 
 <!--- This is an HTML comment in Markdown -->
