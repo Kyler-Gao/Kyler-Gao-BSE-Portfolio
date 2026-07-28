@@ -1,11 +1,6 @@
 # Ball Tracking Robot
 I made a robot that can track and chase a ball. (will add more later)
 
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
-
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Kyler G | Naperville North High School | Mechanical Engineering | Incoming Senior
