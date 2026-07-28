@@ -30,15 +30,9 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+For my second milestone, I wired all the components using the breadboard and RaspberryPi, attached all the remaining parts to the robot, and programmed the robot to track the ball. First, I had to connect my RaspberryPi to my computer so that I could run code on it; this allowed me too test each component after wiring them. Then, once I made sure everything was working, I securely attached the rest of the parts to my robot, which included the breadboard, battery pack, and portable power bank. The breadboard is used to wire everything, the battery pack powers the motors, and the portable charger powers the RaspberryPi. Finally, with the robot fully assembled and wired, I uploaded the ball tracking code onto the RaspberryPi. I encountered some problems with the original code, so I also had to make some changes. For example, the code utilizes the area of the ball in the frame to judge distance, but if part of the ball was cut out of the frame it would appear as if the ball were far away when in reality it was close by and just partly cutoff. Additionally, the code for detecting obstacles with the sensors wasn't working very well, so I also had to fix that. For my final milestone, I plan on adding a modification to the original robot and code.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QMzwgYOOU0o?si=8SxeRTZoUfCtGf7X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # First Milestone
 
