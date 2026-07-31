@@ -37,7 +37,7 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
 # Schematics 
 
-![Headstone Image](BSE Schematic_bb.jpg)
+![Headstone Image](BSESchematic_bb.jpg)
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
