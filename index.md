@@ -1,5 +1,5 @@
 # Ball Tracking Robot
-I made a robot that can track and chase a ball. (will add more later)
+I made a robot that can track and chase a ball while using sensors to avoid colliding with obstacles. I also modified it so that it could run away from the ball instead of moving towards it, and then I adjusted the code to make the robot run away from my cats as well.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -73,10 +73,9 @@ void loop() {
 | 4 AA Battery Holder | Holds the Motor Batteries | $5.88 | <a href="https://www.amazon.com/VWEICYY-Battery-Holder-housing-Without/dp/B0DZX39MHK/ref=sr_1_4?dib=eyJ2IjoiMSJ9.C9MiWkuBDCwaDoCf2KE7wczzz7mBD4YVdicP3OG1478yvIWqZAy7zdy-0hmtlShIPqiWTzUEAEfEnWMIGN-WsKnFEJjLuzhn395DFkdTl3F23AfrnlPmV8UHVZ_hX14BDJI6alwZJFoUG-M-2W7QrID_NUrRGBKW48VlBJQT7IZpFb7kujDga4Bl7TXOn_vvUH41LGp_7Asx1kjY3rKhZAjM6xlXqEWWm7V_DmK3ReYz_scFCrFeuUpxZZsuwOIgk3ULwE-nudGTdu2-fInmmpt2OUPyzABqnWMDUS-5_QA.3AMs3f1gP42cKX0HK9KpCZ0PuLk2HH9VKYyYf-slpO8&dib_tag=se&keywords=4+AA+battery+pack&qid=1785247872&s=electronics&sr=1-4"> Link </a> |
 | USB Power Bank & Cable | Powers the RaspberryPi | $16.19 | <a href="https://www.amazon.com/SIXTHGU-Portable-Charger-Charging-Flashlight/dp/B0C7PHKKNK/ref=sr_1_2_sspa?crid=2ZZM4AAZMMWHQ&dib=eyJ2IjoiMSJ9.W2Zx5_I3mKOn6UpwAzOw6PD0PNh1iaMRBiedequdv9weeWL0HPyPcxJBR9h6-LiFW-sHKnHSApN0sUxx0Q9xIRs80R57IlvvCsmEzXcktogo-4nP-NxrEZOy5dJTcXY8N-PBwfGt4fl_9LP8npenzDUV9TPA8KN6DMu175g6JegC_gZhAJrbqX94EfpQhLwP9vIJH45w2N-AFrfZZOy9jqk55gzVyk4Qst8uZvqn768.KBrc5_SqZ4e8zCpoFc-1C7rk02t3o2ykgDPB65W5JJU&dib_tag=se&keywords=always%2Bon%2Bpower%2Bbank&qid=1715957917&sprefix=always%2Bon%2Bpower%2Bbank%2Caps%2C107&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1"> Link </a> |
 
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
+# Other Resources
+
+- [Ball-Tracking Robot Instructions](https://www.instructables.com/Ball-Tracking-Robot/)
+
 
 To watch the BSE tutorial on how to create a portfolio, click here.
