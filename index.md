@@ -33,14 +33,17 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
 # Code
 
-This is <b>bold</b>.
-
 <details>
-<summary>Click me</summary>
+<summary>Tracking the Ball</summary>
 
-This should be hidden until you click.
+<pre><code class="language-python">
+print("Hello")
+</code></pre>
 
 </details>
+
+<details><summary>Click me</summary>This should be hidden until you click.</details>
+
 
 Tracking the Ball:
 <div style="
