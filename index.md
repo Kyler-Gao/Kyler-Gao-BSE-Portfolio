@@ -33,10 +33,39 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
 # Code
 
-Ball Tracking Code:
+Code for Testing Modules:
 
 <details>
-<summary>Click to view the code</summary>
+<summary>Sensor Test</summary>
+
+```python
+# Your code here
+```
+
+</details>
+
+<details>
+<summary>Camera Test</summary>
+
+```python
+# Your code here
+```
+
+</details>
+
+<details>
+<summary>Motor Test</summary>
+
+```python
+# Your code here
+```
+
+</details>
+
+Code for each Project:
+
+<details>
+<summary>Tracking the Ball</summary>
 
 ```python
 
@@ -276,6 +305,32 @@ GPIO.cleanup()
 
 </details>
 
+<details>
+<summary>Running from the Ball</summary>
+
+```python
+# Your code here
+```
+
+</details>
+
+<details>
+<summary>Running from my Cat</summary>
+
+```python
+# Your code here
+```
+
+</details>
+
+<details>
+<summary>LED Color Detector</summary>
+
+```python
+# Your code here
+```
+
+</details>
 
 # Bill of Materials
 
