@@ -33,13 +33,12 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
 # Code
 
-<details markdown="1">
+<details>
+<summary>Show code</summary>
 
-<summary>Test</summary>
-
-```python
+{% highlight python %}
 print("Hello")
-```
+{% endhighlight %}
 
 </details>
 
