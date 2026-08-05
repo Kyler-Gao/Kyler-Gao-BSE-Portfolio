@@ -33,7 +33,8 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
 # Code
 
-<details>
+<details markdown="1">
+
 <summary>Test</summary>
 
 ```python
