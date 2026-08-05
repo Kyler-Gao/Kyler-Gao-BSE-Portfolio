@@ -33,11 +33,6 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
 # Code
 
-<details>
-  <summary>Click here to expand the dropdown</summary>
-  <p>This is the hidden text or content that appears when clicked!</p>
-</details>
-
 Tracking the Ball:
 <div style="
   height: 350px;
