@@ -34,16 +34,9 @@ My first milestone was assembling the physical robot and attaching all of the pa
 # Code
 
 <details>
-<summary>Tracking the Ball</summary>
-
-<pre><code class="language-python">
-print("Hello")
-</code></pre>
-
+  <summary>Click here to expand the dropdown</summary>
+  <p>This is the hidden text or content that appears when clicked!</p>
 </details>
-
-<details><summary>Click me</summary>This should be hidden until you click.</details>
-
 
 Tracking the Ball:
 <div style="
