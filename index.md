@@ -35,24 +35,10 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
 Ball Tracking Code:
 
-<div style="
-  height: 350px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  background-color: #1e1e1e;
-  color: white;
-  padding: 15px;
-  border-radius: 8px;
-">
-  <pre style="
-    margin: 0;
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    font-family: Consolas, monospace;
-    font-size: 14px;
-    line-height: 1.5;
-  "><code>
+<details>
+<summary>Click to view the code</summary>
+
+```python
 
 # import the necessary packages
 from picamera2 import Picamera2
@@ -286,8 +272,9 @@ camera.stop()
 cv2.destroyAllWindows()
 GPIO.cleanup()
 
-  </code></pre>
-</div>
+```
+
+</details>
 
 
 # Bill of Materials
@@ -311,6 +298,3 @@ GPIO.cleanup()
 # Other Resources
 
 - [Ball-Tracking Robot Instructions](https://www.instructables.com/Ball-Tracking-Robot/)
-
-
-To watch the BSE tutorial on how to create a portfolio, click here.
