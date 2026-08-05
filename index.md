@@ -11,17 +11,9 @@ I made a robot that can track and chase a ball while using sensors to avoid coll
   
 # Final Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+My third and final milestone was adding modifications to the ball tracking robot to make it run away from my cats. The first step was having the robot track my cats, which was difficult because the robot's tracking code relies on detecting a solid, consistent color. Since I happened to have collars that I could put on my cat, I decided to tape a piece of green foam to the collar and coded the camera to track the foam's color. Then I just had to change the code so that the robot would run away if the green foam got too close, and I also made the robot move closer if the green foam was too far away (so that the robot doesn't lose sight of the collar and get lost). Again, similar to how the robot tracked the ball, I just had to check the area of green pixels to determine distance. To make sure the robot doesn't collide with anything as it's running away, I also attached a sensor to the back of the robot. As a second modification, I wanted to add an LED to my robot, and I ended up coding the LED so that it would match the color of the center pixel of the camera. Although it seemed pretty easy, this modification came with plenty of challenges; to summarize the main issue, the camera is able to output the colors it is seeing in various forms (such as RGB) and the LED requires a color input in an RGB format, but the camera's RGB format doesn't distinguish different colors very well and is greatly affected by brightness/saturation. To fix this, I utilized HSV, which stands for Hue, Saturation, and Value (brightness). HSV is another format for describing colors, and in this case the hue value is very good for distinguishing colors, and so in my final code I take the hue value from the camera and convert it into RGB for the LED, and this ended up finally working. In fact, the code I used to detect red (and now green) pixels relies mainly on checking if the pixels fall within a certain hue range.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
-
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-6v-DRfeFRA?si=38b7YIcXyHZuK_5m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Second Milestone
 
