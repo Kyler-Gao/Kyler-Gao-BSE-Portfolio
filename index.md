@@ -33,12 +33,12 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
 # Code
 
-<details>
-<summary>Show code</summary>
+This is <b>bold</b>.
 
-{% highlight python %}
-print("Hello")
-{% endhighlight %}
+<details>
+<summary>Click me</summary>
+
+This should be hidden until you click.
 
 </details>
 
