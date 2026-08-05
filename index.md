@@ -5,6 +5,8 @@ I made a robot that can track and chase a ball while using sensors to avoid coll
 |:--:|:--:|:--:|:--:|
 | Kyler G | Naperville North High School | Mechanical Engineering | Incoming Senior
 
+<img src="BSECats.jpg" width="48%" />
+
 ![Headstone Image](BSECats.jpg)
 ![Headstone Image](BSECat.jpg)
 
