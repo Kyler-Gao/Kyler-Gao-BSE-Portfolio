@@ -1,1 +1,187 @@
+---
+layout: default
+title: Ball Tracking Robot
+---
 
+<h1>Ball Tracking Robot</h1>
+
+<p>
+I made a robot that can track and chase a ball while using sensors to avoid colliding with obstacles.
+I also modified it so that it could run away from the ball instead of moving towards it,
+and then I adjusted the code to make the robot run away from my cats as well.
+</p>
+
+<table>
+    <tr>
+        <th>Engineer</th>
+        <th>School</th>
+        <th>Area of Interest</th>
+        <th>Grade</th>
+    </tr>
+
+    <tr>
+        <td>Kyler G</td>
+        <td>Naperville North High School</td>
+        <td>Mechanical Engineering</td>
+        <td>Incoming Senior</td>
+    </tr>
+</table>
+
+<p>
+<b>Replace the BlueStamp logo below with an image of yourself and your completed project.
+Follow the guide
+<a href="https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html">
+here
+</a>
+if you need help.</b>
+</p>
+
+<img src="logo.svg" alt="Project Image">
+
+<hr>
+
+<h1>Final Milestone</h1>
+
+<p>
+My third and final milestone was adding modifications to the ball tracking robot to make it run away from my cats.
+The first step was having the robot track my cats, which was difficult because the robot's tracking code relies on detecting
+a solid, consistent color. Since I happened to have collars that I could put on my cat, I decided to tape a piece of green foam
+to the collar and coded the camera to track the foam's color.
+</p>
+
+<p>
+Then I just had to change the code so that the robot would run away if the green foam got too close,
+and I also made the robot move closer if the green foam was too far away (so that the robot doesn't lose sight of the collar and get lost).
+Again, similar to how the robot tracked the ball, I just had to check the area of green pixels to determine distance.
+To make sure the robot doesn't collide with anything as it's running away, I also attached a sensor to the back of the robot.
+</p>
+
+<p>
+As a second modification, I wanted to add an LED to my robot, and I ended up coding the LED so that it would match the color
+of the center pixel of the camera. Although it seemed pretty easy, this modification came with plenty of challenges;
+to summarize the main issue, the camera is able to output the colors it is seeing in various forms (such as RGB) and the LED
+requires a color input in an RGB format, but the camera's RGB format doesn't distinguish different colors very well and is
+greatly affected by brightness and saturation.
+</p>
+
+<p>
+To fix this, I utilized HSV, which stands for Hue, Saturation, and Value (brightness).
+HSV is another format for describing colors, and in this case the hue value is very good for distinguishing colors,
+and so in my final code I take the hue value from the camera and convert it into RGB for the LED, and this ended up finally working.
+In fact, the code I used to detect red (and now green) pixels relies mainly on checking if the pixels fall within a certain hue range.
+</p>
+
+<div style="text-align:center;">
+<iframe width="560"
+height="315"
+src="https://www.youtube.com/embed/-6v-DRfeFRA?si=38b7YIcXyHZuK_5m"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
+
+<hr>
+
+<h1>Second Milestone</h1>
+
+<p>
+For my second milestone, I wired all the components using the breadboard and Raspberry Pi,
+attached all the remaining parts to the robot,
+and programmed the robot to track the ball.
+</p>
+
+<p>
+First, I had to connect my Raspberry Pi to my computer so that I could run code on it;
+this allowed me to test each component after wiring them.
+</p>
+
+<p>
+Then, once I made sure everything was working,
+I securely attached the rest of the parts to my robot,
+which included the breadboard, battery pack, and portable power bank.
+The breadboard is used to wire everything,
+the battery pack powers the motors,
+and the portable charger powers the Raspberry Pi.
+</p>
+
+<p>
+Finally, with the robot fully assembled and wired,
+I uploaded the ball tracking code onto the Raspberry Pi.
+
+I encountered some problems with the original code,
+so I also had to make some changes.
+For example,
+the code utilizes the area of the ball in the frame to judge distance,
+but if part of the ball was cut out of the frame
+it would appear as if the ball were far away
+when in reality it was close by and just partly cut off.
+
+Additionally,
+the code for detecting obstacles with the sensors wasn't working very well,
+so I also had to fix that.
+
+For my final milestone,
+I planned on adding a modification to the original robot and code.
+</p>
+
+<div style="text-align:center;">
+<iframe width="560"
+height="315"
+src="https://www.youtube.com/embed/QMzwgYOOU0o?si=8SxeRTZoUfCtGf7X"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
+
+<hr>
+
+<h1>First Milestone</h1>
+
+<p>
+My first milestone was assembling the physical robot and attaching all of the parts using the kit that I received.
+The kit came with an acrylic plate as the main body of the robot, so I attached the motors and wheels to the bottom of the plate.
+</p>
+
+<p>
+In the original kit, there was only one sensor that pointed straight forward,
+but for this project I needed two sensors, one on each side,
+in order to detect any obstacles in the way of the robot.
+
+Additionally,
+I needed to add a camera to the front of the robot
+so that it could see the ball and track it.
+</p>
+
+<p>
+This was the first challenge I had to overcome,
+as I had to attach all of these parts onto the robot
+even though the robot wasn't designed for them.
+
+To overcome this,
+I found and repurposed different holes in the plate
+so that I could screw each of the parts on.
+
+Now that I've finished putting together the robot,
+I had to start wiring each component to the Raspberry Pi
+and then add the code so that the robot could track the ball.
+</p>
+
+<div style="text-align:center;">
+<iframe width="560"
+height="315"
+src="https://www.youtube.com/embed/MZ9oSHlCFnE?si=c6Z2YKkvBLChy1ks"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+</div>
+
+<hr>
