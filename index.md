@@ -37,11 +37,11 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
   <summary> Epcot </summary>
 
-  '''python
+  ```python
 
   print("hello")
 
-  '''
+  ```
   <p> epcot is <p>
 
 </details>
