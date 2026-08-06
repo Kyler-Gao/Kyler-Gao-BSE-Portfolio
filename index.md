@@ -36,15 +36,13 @@ My first milestone was assembling the physical robot and attaching all of the pa
 <details>
 
   <summary> Epcot </summary>
-
-  ```python
-
-  print("hello")
-
-  ```
-  <p> epcot is <p>
+  
+  {% highlight python %}
+  print("Hello")
+  {% endhighlight %}
 
 </details>
+
 
 Tracking the Ball:
 <div style="
