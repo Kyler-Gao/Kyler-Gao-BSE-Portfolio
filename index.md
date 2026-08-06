@@ -53,7 +53,7 @@ Sensor Test:
     font-size: 14px;
     line-height: 1.5;
   "><code>
-{% highlight python %}
+```python
 # import the necessary packages
 
 import RPi.GPIO as GPIO
@@ -219,7 +219,7 @@ while(1<10):
 
 
 GPIO.cleanup() #free all the GPIO pins
-{% endhighlight %}
+```
   </code></pre>
 </div>
 
