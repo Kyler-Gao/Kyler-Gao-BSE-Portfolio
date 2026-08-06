@@ -38,8 +38,7 @@ My first milestone was assembling the physical robot and attaching all of the pa
   <summary> Epcot </summary>
   
   {% highlight python %}
-  print("Hello")
-  {% endhighlight %}
+  print("Hello"){% endhighlight %}
 
 </details>
 
