@@ -33,6 +33,11 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
 # Code
 
+<details>
+  <summary>Epcot Center</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details>
+
 Tracking the Ball:
 <div style="
   height: 350px;
