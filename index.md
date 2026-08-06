@@ -53,7 +53,7 @@ Sensor Test:
     font-size: 14px;
     line-height: 1.5;
   "><code>
-```python
+{% highlight python %}
 # import the necessary packages
 
 import RPi.GPIO as GPIO
@@ -218,8 +218,193 @@ while(1<10):
     distanceB = sonar(GPIO_TRIGGER5, GPIO_ECHO5)
 
 
-GPIO.cleanup() #free all the GPIO pins
-```
+GPIO.cleanup() #free all the GPIO pins{% endhighlight %}
+  </code></pre>
+</div>
+
+Camera Test:
+<div style="
+  height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+">
+  <pre style="
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+  "><code>
+{% highlight python %}
+from picamera2 import Picamera2
+import cv2
+import numpy as np
+import time
+
+def segment_colour(frame):    #returns only the red colors in the frame
+    hsv_roi = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    mask_1 = cv2.inRange(hsv_roi, np.array([160, 160, 10]), np.array([180, 255, 255]))
+    ycr_roi = cv2.cvtColor(frame, cv2.COLOR_BGR2YCrCb)
+    mask_2 = cv2.inRange(ycr_roi, np.array((0., 165., 0.)), np.array((255., 255., 255.)))
+    mask = mask_1 | mask_2
+    kern_dilate = np.ones((8,8),np.uint8)
+    kern_erode  = np.ones((3,3),np.uint8)
+    mask= cv2.erode(mask,kern_erode)
+    mask=cv2.dilate(mask,kern_dilate)
+    return mask
+
+def find_blob(blob):
+    largest_contour=0
+    cont_index=0
+    contours, hierarchy = cv2.findContours(blob, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
+    for idx, contour in enumerate(contours):
+        area=cv2.contourArea(contour)
+        if (area > largest_contour):
+            largest_contour=area
+            cont_index=idx
+    r=(0,0,2,2)
+    if len(contours) > 0:
+        r = cv2.boundingRect(contours[cont_index])
+    return r, largest_contour
+
+camera = Picamera2()
+config = camera.create_preview_configuration(main={"size": (160, 120), "format": "RGB888"})
+camera.configure(config)
+camera.start()
+time.sleep(0.1)
+
+while True:
+    frame = camera.capture_array()
+    frame = cv2.flip(frame, 0)
+
+    mask_red = segment_colour(frame)
+    loct, area = find_blob(mask_red)
+    x, y, w, h = loct
+
+    if (w*h) >= 10:
+        cv2.rectangle(frame, (x,y), (x+w,y+h), (0,255,0), 2)
+        centre_x = int(x + w/2)
+        centre_y = int(y + h/2)
+        cv2.circle(frame, (centre_x, centre_y), 3, (0,110,255), -1)
+        print("Ball found - area: %d  centre: (%d, %d)" % (area, centre_x, centre_y))
+    else:
+        print("No ball found")
+
+    cv2.imshow("Camera feed", frame)
+    cv2.imshow("Red mask", mask_red)
+
+    if cv2.waitKey(1) & 0xff == ord('q'):
+        break
+
+camera.stop()
+cv2.destroyAllWindows(){% endhighlight %}
+  </code></pre>
+</div>
+
+Motor Test:
+<div style="
+  height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+">
+  <pre style="
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+  "><code>
+{% highlight python %}
+# import the necessary packages
+#from picamera.array import PiRGBArray     #As there is a resolution problem in raspberry pi, will not be able to capture frames by VideoCapture
+#from picamera2 import PiCamera2
+import RPi.GPIO as GPIO
+import time
+import numpy as np
+
+#hardware work
+GPIO.setmode(GPIO.BOARD)
+
+MOTOR1B=21  #Left Motor
+MOTOR1E=19
+
+MOTOR2B=22  #Right Motor
+MOTOR2E=18
+
+LED_PIN=13  #If it finds the ball, then it will light up the led
+
+GPIO.setup(MOTOR1B, GPIO.OUT)
+GPIO.setup(MOTOR1E, GPIO.OUT)
+
+GPIO.setup(MOTOR2B, GPIO.OUT)
+GPIO.setup(MOTOR2E, GPIO.OUT)
+
+def forward():
+      GPIO.output(MOTOR1B, GPIO.HIGH)
+      GPIO.output(MOTOR1E, GPIO.LOW)
+      GPIO.output(MOTOR2B, GPIO.HIGH)
+      GPIO.output(MOTOR2E, GPIO.LOW)
+     
+def reverse():
+      GPIO.output(MOTOR1B, GPIO.LOW)
+      GPIO.output(MOTOR1E, GPIO.HIGH)
+      GPIO.output(MOTOR2B, GPIO.LOW)
+      GPIO.output(MOTOR2E, GPIO.HIGH)
+     
+def leftturn():
+      GPIO.output(MOTOR1B,GPIO.LOW)
+      GPIO.output(MOTOR1E,GPIO.HIGH)
+      GPIO.output(MOTOR2B,GPIO.HIGH)
+      GPIO.output(MOTOR2E,GPIO.LOW)
+     
+def rightturn():
+      GPIO.output(MOTOR1B,GPIO.HIGH)
+      GPIO.output(MOTOR1E,GPIO.LOW)
+      GPIO.output(MOTOR2B,GPIO.LOW)
+      GPIO.output(MOTOR2E,GPIO.HIGH)
+
+def stop():
+      GPIO.output(MOTOR1E,GPIO.LOW)
+      GPIO.output(MOTOR1B,GPIO.LOW)
+      GPIO.output(MOTOR2E,GPIO.LOW)
+      GPIO.output(MOTOR2B,GPIO.LOW)
+     
+print("Forward")     
+forward()
+time.sleep(3)
+stop()
+time.sleep(1)
+
+print("Reverse")     
+reverse()
+time.sleep(3)
+stop()
+time.sleep(1)
+
+print("Right")     
+rightturn()
+time.sleep(3)
+stop()
+time.sleep(1)
+
+print("Left")
+leftturn()
+time.sleep(3)
+stop()
+
+GPIO.cleanup() #free all the GPIO pins{% endhighlight %}
   </code></pre>
 </div>
 
@@ -499,7 +684,7 @@ Running from Ball:
     font-size: 14px;
     line-height: 1.5;
   "><code>
-
+{% highlight python %}
 # import the necessary packages
 from picamera2 import Picamera2
 import RPi.GPIO as GPIO
@@ -751,8 +936,7 @@ while True:
 stop()
 camera.stop()
 cv2.destroyAllWindows()
-GPIO.cleanup()
-
+GPIO.cleanup(){% endhighlight %}
   </code></pre>
 </div>
 
@@ -775,7 +959,7 @@ Running from Cat:
     font-size: 14px;
     line-height: 1.5;
   "><code>
-
+{% highlight python %}
 # import the necessary packages
 from picamera2 import Picamera2
 import RPi.GPIO as GPIO
@@ -1021,8 +1205,7 @@ while True:
 stop()
 camera.stop()
 cv2.destroyAllWindows()
-GPIO.cleanup()
-
+GPIO.cleanup(){% endhighlight %}
   </code></pre>
 </div>
 
@@ -1045,7 +1228,7 @@ Color Detector:
     font-size: 14px;
     line-height: 1.5;
   "><code>
-
+{% highlight python %}
 # import the necessary packages
 from picamera2 import Picamera2
 import RPi.GPIO as GPIO
@@ -1222,8 +1405,7 @@ bluePWM.stop()
 stop()
 camera.stop()
 cv2.destroyAllWindows()
-GPIO.cleanup()
-
+GPIO.cleanup(){% endhighlight %}
   </code></pre>
 </div>
 
