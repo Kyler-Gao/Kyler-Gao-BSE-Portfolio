@@ -33,13 +33,29 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
 # Code
 
-Code for Testing Components:
+## Code for Testing Components:
 
-<details>
+Sensor Test:
+<div style="
+  height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+">
+  <pre style="
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+  "><code>
 
-<summary> Sensor Test </summary>
-  
-{% highlight python %}
+  ```python
 # import the necessary packages
 
 import RPi.GPIO as GPIO
@@ -204,11 +220,12 @@ while(1<10):
     distanceB = sonar(GPIO_TRIGGER5, GPIO_ECHO5)
 
 
-GPIO.cleanup() #free all the GPIO pins{% endhighlight %}
+GPIO.cleanup() #free all the GPIO pins
+```
+  </code></pre>
+</div>
 
-</details>
-
-
+### Code for Completed Project:
 Tracking the Ball:
 <div style="
   height: 350px;
