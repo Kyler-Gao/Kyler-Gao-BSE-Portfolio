@@ -35,6 +35,7 @@ My first milestone was assembling the physical robot and attaching all of the pa
 
 <details>
 
+  <summary> Epcot </summary>
   <p> epcot is <p>
 
 </details>
