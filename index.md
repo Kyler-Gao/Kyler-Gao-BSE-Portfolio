@@ -1430,4 +1430,5 @@ GPIO.cleanup(){% endhighlight %}
 
 # Other Resources
 
-- [Ball-Tracking Robot Instructions](https://www.instructables.com/Ball-Tracking-Robot/)
+- [Ball Tracking Robot Guide](https://www.instructables.com/Ball-Tracking-Robot/)
+- [Raspberry Pi Pins](https://techexplorations.com/guides/rpi/begin/raspberry-pi-pins-gpio/)
